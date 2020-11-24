@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Cranbrook BC Estimated COVID-19 Cases as of Nov 24 2020</title>
+    
+    <link href="css/bootstrap.css" rel="stylesheet" />
+	<link href="css/coming-sssoon.css" rel="stylesheet" />    
+    
+    <!--     Fonts     -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+<div class="main" style="background-image: url('images/default.jpg')">
+    
+    <div class="cover black" data-color="black"></div>
+
+    <div class="container">
+        <h1 class="logo">
+         Cranbrook BC Estimated Active COVID-19 Cases
+        </h1>
+
+        <h2 class="logo">
+         <span id="output_number"></span>
+        </h2>
+        
+        <div class="content">
+            <h4 class="motto">
+            This is not an official number but we've made this page because the City has refused to an give official number!
+            <br>
+            <br>            
+            <div>
+                <a href="http://citypopulation.de/en/canada/britishcolumbia/admin/5901__east_kootenay/">
+                    Based on Cranbrook having Aprox. 34% population of the Regional District of East Kootenay
+                </a>
+                <br>
+                <br>
+                <a href="http://docs.cranbrook.ca/downloads/COVID/updates/Regional-Update-November-20-2020.pdf">
+                    And the 22 positive cases from (November 6-19) in the Regional District of East Kootenay
+                </a>
+                <br>
+                <br>
+                    The calculation is number of positive cases multiplied by 34%
+                <br>
+                <br>
+                <a href="mailto:info@cranbrook.ca">Tell your city to give you the numbers by emailing info@cranbrook.ca</a> or calling <a href="tel:8007282726">800-728-2726</a>
+                <br>
+                <br>
+                <a href="https://cranbrook.ca/residents/covid-19-updates-information/">
+                    "Official" Source of information from the City website
+                </a>
+            </div>
+            </h4>
+        </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+           Webpage template is made by <a href="http://www.creative-tim.com">Creative Tim</a> <a href="http://www.creative-tim.com/product/coming-sssoon-page">here.</a> he has no affilation with this page, the contents within or any of the opinions expressed here.
+      </div>
+    </div>
+ </div>
+ </body>
+   <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+   <script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+active_cases = 22;
+// As of November 20, 2020
+pop_east_kootany = 64695;
+pop_cranbrook = 21247;
+output = document.getElementById('output_number');
+
+output.innerHTML = Math.floor((pop_cranbrook/pop_east_kootany)*active_cases);
+</script>
+
+</html>
